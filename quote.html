@@ -29,6 +29,7 @@
   <a class="logo" href="index.html"><img src="assets/logo_h.png" alt="Supply Bridge Asia"></a>
   <ul>
     <li><a href="index.html#categories">What we source</a></li>
+    <li><a href="index.html#tender-support">Tender &amp; EPC Support</a></li>
     <li><a href="index.html#how">How we work</a></li>
     <li><a href="index.html#consolidation">BOM &amp; LCL</a></li>
     <li><a href="index.html#inspection">Inspection</a></li>
@@ -48,12 +49,19 @@
     <a class="btn wa big" href="https://wa.me/8617757312044?text=Hello%20Supply%20Bridge%20Asia%2C%20I%20would%20like%20to%20request%20a%20quote%20for%3A%20" target="_blank" rel="noopener">Message on WhatsApp<small>+86 177 5731 2044</small></a>
   </div>
 
+  <div class="card" style="margin-bottom:20px;border-left:4px solid var(--gold);background:#fff">
+    <div class="kick">For Tender Bidders, EPCs &amp; Government / UN / NGO RFQs</div>
+    <h3 style="margin-top:4px">Submitting a Tender BOQ (UNOPS / World Bank / ADB / Utility / Corporate Bid)?</h3>
+    <p style="margin-top:6px">If you are pricing an active tender as a local bidder or EPC contractor, please enter your <b>Tender Reference No.</b>, <b>Bid Closing Date</b>, and required <b>Bid Submittal Documents</b> (such as itemised BOQ format, line-by-line Technical Compliance &amp; Deviation Schedule, or Project-Specific Manufacturer Authorization / MAF) below. For multi-page Excel or PDF BOQ files, click <b>Send by email</b> and attach your files directly in your mail client.</p>
+  </div>
+
   <div class="card qbox">
     <h3>Build your enquiry</h3>
     <div class="qform">
       <label>Category
         <select id="cat">
           <option value="Open-Mandate / Custom Product or Full Tender BOQ">Open-Mandate / Any Custom Product or Full Tender BOQ</option>
+          <option value="Tender Bid Sub-Supply (Government / World Bank / UN / EPC BOQ)">Tender Bid Sub-Supply (Government / World Bank / UN / EPC BOQ)</option>
           <option value="01. Industrial Machinery, Pumps & Fluid Equipment">01. Industrial Machinery, Pumps &amp; Fluid Equipment</option>
           <option value="02. Construction, Building Materials, Sealants & Wire">02. Construction, Building Materials, Sealants &amp; Wire</option>
           <option value="03. Power Cables, Solar PV, Battery & Lighting">03. Power Cables, Solar PV, Battery &amp; Lighting</option>
@@ -72,6 +80,17 @@
       </label>
       <label>Your company &amp; contact
         <input id="comp" type="text" placeholder="Company name, your name &amp; email/WhatsApp">
+      </label>
+      <label>Tender Ref. &amp; Bid Closing Date (optional, for bidders)
+        <input id="tref" type="text" placeholder="e.g. UNOPS / WB / Local Tender No. · Closing: 30 Nov 2026">
+      </label>
+      <label>Tender document support needed (optional)
+        <select id="tdoc">
+          <option value="Standard Commercial Quotation">Standard Commercial Quotation</option>
+          <option value="Itemised BOQ Pricing + Technical Datasheets">Itemised BOQ Pricing + Technical Datasheets</option>
+          <option value="BOQ + Line-by-Line Technical Compliance & Deviation Sheet">BOQ + Line-by-Line Technical Compliance &amp; Deviation Sheet</option>
+          <option value="Full Tender Package (BOQ + Technical Compliance + Project-Specific MAF Coordination)">Full Tender Package (BOQ + Technical Compliance + Project-Specific MAF Coordination)</option>
+        </select>
       </label>
       <label class="full">Product specifications, standards &amp; quantities
         <textarea id="spec" rows="5" placeholder="e.g. Item, model/rating, material/standard, quantity, packaging requirement, or paste your BOQ lines here. For PDF/Excel attachments, click 'Send by email' and attach your files in your mail client."></textarea>
@@ -92,20 +111,22 @@
 
 <script>
 (function(){
-  var cat=document.getElementById('cat'),port=document.getElementById('port'),term=document.getElementById('term'),comp=document.getElementById('comp'),spec=document.getElementById('spec'),wa=document.getElementById('sendWa'),ml=document.getElementById('sendMail');
+  var cat=document.getElementById('cat'),port=document.getElementById('port'),term=document.getElementById('term'),comp=document.getElementById('comp'),tref=document.getElementById('tref'),tdoc=document.getElementById('tdoc'),spec=document.getElementById('spec'),wa=document.getElementById('sendWa'),ml=document.getElementById('sendMail');
   function upd(){
     var lines=['RFQ – SUPPLY BRIDGE ASIA (supplybridgeasia.net)',''];
     if(cat.value)lines.push('Category: '+cat.value);
     if(comp.value.trim())lines.push('Buyer / Contact: '+comp.value.trim());
     if(port.value.trim())lines.push('Destination Port / Country: '+port.value.trim());
     if(term.value.trim())lines.push('Incoterms / Target Delivery: '+term.value.trim());
+    if(tref&&tref.value.trim())lines.push('Tender Ref. / Bid Closing Date: '+tref.value.trim());
+    if(tdoc&&tdoc.value)lines.push('Required Documentation: '+tdoc.value);
     lines.push('','Specifications & Quantities:',spec.value.trim()||'(Please enter specifications or attach BOQ file)');
     var body=lines.join('\n');
-    var subj='RFQ – '+(cat.value||'Industrial Supplies')+(port.value.trim()?' ('+port.value.trim()+')':'');
+    var subj='RFQ – '+(tref&&tref.value.trim()?tref.value.trim()+' – ':'')+(cat.value||'Industrial Supplies')+(port.value.trim()?' ('+port.value.trim()+')':'');
     wa.href='https://wa.me/8617757312044?text='+encodeURIComponent(body);
     ml.href='mailto:zane@supplybridgeasia.net?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
   }
-  [cat,port,term,comp,spec].forEach(function(el){el.addEventListener('input',upd);el.addEventListener('change',upd)});
+  [cat,port,term,comp,tref,tdoc,spec].forEach(function(el){if(el){el.addEventListener('input',upd);el.addEventListener('change',upd)}});
   upd();
 })();
 </script>
