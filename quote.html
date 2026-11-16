@@ -81,19 +81,22 @@
       <label>Your company &amp; contact
         <input id="comp" type="text" placeholder="Company name, your name &amp; email/WhatsApp">
       </label>
-      <label>Tender Ref. &amp; Bid Closing Date (optional, for bidders)
-        <input id="tref" type="text" placeholder="e.g. UNOPS / WB / Local Tender No. · Closing: 30 Nov 2026">
+      <label>Tender Reference No. (optional, for bidders)
+        <input id="tref" type="text" placeholder="e.g. UNOPS / WB / Local Utility Tender Ref.">
       </label>
-      <label>Tender document support needed (optional)
+      <label>Bid Closing Date (optional, for bidders)
+        <input id="tdate" type="text" placeholder="e.g. 30 Nov 2026">
+      </label>
+      <label class="full">Tender document support needed (optional)
         <select id="tdoc">
           <option value="Standard Commercial Quotation">Standard Commercial Quotation</option>
           <option value="Itemised BOQ Pricing + Technical Datasheets">Itemised BOQ Pricing + Technical Datasheets</option>
           <option value="BOQ + Line-by-Line Technical Compliance & Deviation Sheet">BOQ + Line-by-Line Technical Compliance &amp; Deviation Sheet</option>
-          <option value="Full Tender Package (BOQ + Technical Compliance + Project-Specific MAF Coordination)">Full Tender Package (BOQ + Technical Compliance + Project-Specific MAF Coordination)</option>
+          <option value="Full Tender Package (BOQ + Technical Compliance + Project-Specific MAF Coordination, subject to factory approval)">Full Tender Package (BOQ + Technical Compliance + Project-Specific MAF Coordination, subject to factory approval)</option>
         </select>
       </label>
       <label class="full">Product specifications, standards &amp; quantities
-        <textarea id="spec" rows="5" placeholder="e.g. Item, model/rating, material/standard, quantity, packaging requirement, or paste your BOQ lines here. For PDF/Excel attachments, click 'Send by email' and attach your files in your mail client."></textarea>
+        <textarea id="spec" rows="5" placeholder="e.g. Item, model/rating, material/standard, quantity, packaging requirement, or paste your BOQ lines here. For PDF/Excel attachments, click 'Send by email' and attach your files in your mail client (Email / WhatsApp messages only)."></textarea>
       </label>
     </div>
     <div class="acts">
@@ -111,14 +114,15 @@
 
 <script>
 (function(){
-  var cat=document.getElementById('cat'),port=document.getElementById('port'),term=document.getElementById('term'),comp=document.getElementById('comp'),tref=document.getElementById('tref'),tdoc=document.getElementById('tdoc'),spec=document.getElementById('spec'),wa=document.getElementById('sendWa'),ml=document.getElementById('sendMail');
+  var cat=document.getElementById('cat'),port=document.getElementById('port'),term=document.getElementById('term'),comp=document.getElementById('comp'),tref=document.getElementById('tref'),tdate=document.getElementById('tdate'),tdoc=document.getElementById('tdoc'),spec=document.getElementById('spec'),wa=document.getElementById('sendWa'),ml=document.getElementById('sendMail');
   function upd(){
     var lines=['RFQ – SUPPLY BRIDGE ASIA (supplybridgeasia.net)',''];
     if(cat.value)lines.push('Category: '+cat.value);
     if(comp.value.trim())lines.push('Buyer / Contact: '+comp.value.trim());
     if(port.value.trim())lines.push('Destination Port / Country: '+port.value.trim());
     if(term.value.trim())lines.push('Incoterms / Target Delivery: '+term.value.trim());
-    if(tref&&tref.value.trim())lines.push('Tender Ref. / Bid Closing Date: '+tref.value.trim());
+    if(tref&&tref.value.trim())lines.push('Tender Reference No.: '+tref.value.trim());
+    if(tdate&&tdate.value.trim())lines.push('Bid Closing Date: '+tdate.value.trim());
     if(tdoc&&tdoc.value)lines.push('Required Documentation: '+tdoc.value);
     lines.push('','Specifications & Quantities:',spec.value.trim()||'(Please enter specifications or attach BOQ file)');
     var body=lines.join('\n');
@@ -126,7 +130,7 @@
     wa.href='https://wa.me/8617757312044?text='+encodeURIComponent(body);
     ml.href='mailto:zane@supplybridgeasia.net?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
   }
-  [cat,port,term,comp,tref,tdoc,spec].forEach(function(el){if(el){el.addEventListener('input',upd);el.addEventListener('change',upd)}});
+  [cat,port,term,comp,tref,tdate,tdoc,spec].forEach(function(el){if(el){el.addEventListener('input',upd);el.addEventListener('change',upd)}});
   upd();
 })();
 </script>
