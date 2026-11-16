@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SBA-QT-20261116-223 — ETC SARL | SUPPLY BRIDGE ASIA</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 24px 16px;
+      line-height: 1.5;
+    }
+    .toolbar {
+      max-width: 920px;
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: #0f172a;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+    }
+    .toolbar-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-print { background: #38bdf8; color: #0f172a; }
+    .btn-wa { background: #22c55e; color: #fff; }
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 36px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+      border-top: 6px solid #0284c7;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    .brand h1 { font-size: 22px; letter-spacing: 0.5px; color: #0f172a; font-weight: 800; }
+    .brand p { font-size: 12px; color: #475569; margin-top: 3px; }
+    .doc-badge {
+      text-align: right;
+    }
+    .doc-badge .tag {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-weight: 700;
+      font-size: 11.5px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.4px;
+    }
+    .doc-badge .qno {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-top: 6px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .meta-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 12.5px;
+    }
+    .meta-box h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #0284c7;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .meta-row { margin-bottom: 4px; display: flex; gap: 6px; }
+    .meta-row strong { color: #334155; min-width: 125px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+    }
+    th {
+      background: #0f172a;
+      color: #fff;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      padding: 10px 10px;
+      text-align: left;
+    }
+    td {
+      padding: 10px 10px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+    .total-bar {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 6px;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 13.5px;
+    }
+    .total-bar strong { color: #0369a1; font-size: 15px; }
+    .info-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .info-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px 15px;
+      font-size: 12px;
+      color: #334155;
+    }
+    .info-card h4 {
+      font-size: 11.5px;
+      color: #0f172a;
+      margin-bottom: 6px;
+      font-weight: 700;
+      border-left: 3px solid #0284c7;
+      padding-left: 8px;
+    }
+    .footer-sign {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 14px;
+      font-size: 12px;
+      color: #475569;
+    }
+    .stamp-box {
+      text-align: right;
+    }
+    .stamp {
+      display: inline-block;
+      border: 2px solid #0284c7;
+      color: #0284c7;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11.5px;
+      letter-spacing: 0.5px;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .toolbar { display: none !important; }
+      .page { box-shadow: none; padding: 16px 20px; max-width: 100%; border-radius: 0; }
+    }
+    @media (max-width: 700px) {
+      .meta-grid, .info-section { grid-template-columns: 1fr; }
+      .page { padding: 20px 16px; }
+      table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <div style="font-size:13px;font-weight:600;">SUPPLY BRIDGE ASIA — SBA-QT-20261116-223 (ETC SARL)</div>
+    <div class="toolbar-actions">
+      <button class="btn btn-print" onclick="window.print()">🖨️ Imprimer / Enregistrer en PDF</button>
+      <a class="btn btn-wa" href="mailto:zane@supplybridgeasia.net?subject=Re:%20SBA-QT-20261116-223%20-%20ETC%20SARL">✉️ zane@supplybridgeasia.net</a>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <div class="brand">
+        <h1>SUPPLY BRIDGE ASIA</h1>
+        <p>Hangzhou Supply Bridge Asia Co., Ltd. | Multi-Category Project Supply & Container Consolidation</p>
+        <p>Email: zane@supplybridgeasia.net / zane@supplybridgeasia.com | Web: https://supplybridgeasia.net</p>
+      </div>
+      <div class="doc-badge">
+        <span class="tag">DEVIS INDICATIF / OFFRE DE PRIX INDICATIVE</span>
+        <div class="qno">SBA-QT-20261116-223</div>
+        <div style="font-size:12px;color:#475569;margin-top:2px;">16 Novembre 2026</div>
+      </div>
+    </div>
+
+    <div class="meta-grid">
+      <div class="meta-box">
+        <h3>DESTINATAIRE / CLIENT</h3>
+        <div class="meta-row"><strong>Client / Entreprise:</strong> <span>ETC SARL</span></div>
+        <div class="meta-row"><strong>WhatsApp / Tel:</strong> <span>+223 79 39 52 67</span></div>
+        <div class="meta-row"><strong>Pays / Country:</strong> <span>Mali (Bamako)</span></div>
+        <div class="meta-row"><strong>Projet / Référence:</strong> <span>Travaux de réhabilitation de 13 lycées à Bamako</span></div>
+      </div>
+      <div class="meta-box">
+        <h3>RÉFÉRENCES DE L'OFFRE</h3>
+        <div class="meta-row"><strong>Validité de l'offre:</strong> <span>01 Décembre 2026 (Validité 15 jours — indexé cours LME cuivre)</span></div>
+        <div class="meta-row"><strong>Incoterm:</strong> <span>Indicative FOB Ningbo / Shanghai, Chine (Incoterms® 2020 — Suivi documentaire BESC inclus)</span></div>
+        <div class="meta-row"><strong>Port / Destination:</strong> <span>Transit Dakar / Abidjan vers Bamako (avec documents BESC)</span></div>
+        <div class="meta-row"><strong>Délai de mise à FOB:</strong> <span>12–18 jours ouvrés après confirmation</span></div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:42px;text-align:center;">N°</th>
+          <th>Désignation & Spécifications Techniques</th>
+          <th style="width:140px;">Normes & Essais</th>
+          <th style="width:85px;text-align:center;">Unité</th>
+          <th style="width:135px;text-align:right;">Prix Unitaire (FOB Chine)</th>
+          <th style="width:95px;text-align:center;">Qté Type (Lot)</th>
+          <th style="width:145px;text-align:right;">Sous-total Indicatif (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">01</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Câble Électrique Cuivre Sans Halogène (LSZH)</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Conducteur cuivre, isolation XLPE, gaine sans halogène faible fumée, tension 0.6/1 kV, section 4 × 25 mm²</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">IEC 60502-1 / IEC 60332-1 / IEC 60754-1 / IEC 61034</td>
+        <td style="text-align:center;font-size:12.5px;">Mètre<br><span style="font-size:11px;color:#64748b;">(MOQ: 500 Mètres)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$16.71 USD / m</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">1,300 Mètre</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$21,723.00</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">02</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Kit Solaire Hybride Autonome 5 kW / 10 kWh</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Onduleur hybride MPPT 5kW + Batterie LiFePO4 10kWh (6000 cycles) + Panneaux PV monocristallins + coffret de protection et câbles PV</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">IEC 61215 / IEC 61730 / IEC 62109 / IEC 62619 ; Transport UN38.3</td>
+        <td style="text-align:center;font-size:12.5px;">Kit<br><span style="font-size:11px;color:#64748b;">(MOQ: 5 Kits)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$2,256.00 – $3,123.00 USD / kit</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">13 Kit</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$29,328.00 – $40,599.00</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="total-bar">
+      <span><strong>Total Estimatif Lot Type (FOB Chine):</strong></span>
+      <strong>$51,051.00 – $62,322.00 USD (FOB Chine, base 13 lycées : 1,300 m câble 4×25 mm² + 13 kits solaires 5kW/10kWh)</strong>
+    </div>
+
+    <div class="info-section">
+      <div class="info-card">
+        <h4>AVANTAGE GROUPAGE CONTENEUR & CONTRÔLE QUALITÉ (SBA)</h4>
+        <p>Groupage multi-lots pour les 13 lycées : Câbles cuivre + kits solaires hybrides LiFePO4 dans un seul conteneur 20'GP/40'HQ avec préparation complète des documents BESC et certificats UN38.3 / IEC.</p>
+        <p style="margin-top:6px;color:#0369a1;font-weight:600;">Sur le chantier des 13 lycées, souhaitez-vous verrouiller d'abord le lot câbles électriques ou le lot kits solaires ?</p>
+      </div>
+      <div class="info-card">
+        <h4>CONDITIONS DE PAIEMENT, INSPECTION & GARANTIES D'EXÉCUTION</h4>
+        <p><strong>Payment:</strong> 30% T/T d'acompte à la commande + 70% T/T sous 3 jours ouvrés après inspection SGS/BV et vidéo WhatsApp en direct de l'empotage (avant départ navire de Chine), ou 100% L/C irrévocable à vue soumise aux RUU 600 (UCP 600).</p>
+        <p style="margin-top:6px;">Exécution via nos usines partenaires certifiées ISO/IEC en Chine avec consolidation multi-lots, rapports d'essais usine complets, inspection SGS ou Bureau Veritas (BV) avant expédition et vidéo WhatsApp en direct de l'empotage avant règlement du solde.</p>
+      </div>
+    </div>
+
+    <div class="footer-sign">
+      <div>
+        <strong>Prepared by:</strong> Zane Zhou — Export Project Director, SUPPLY BRIDGE ASIA<br>
+        <span>Direct Email: zane@supplybridgeasia.net | Official Portal: https://supplybridgeasia.net</span>
+      </div>
+      <div class="stamp-box">
+        <div class="stamp">AUTHORIZED QUOTATION<br>SUPPLY BRIDGE ASIA</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
