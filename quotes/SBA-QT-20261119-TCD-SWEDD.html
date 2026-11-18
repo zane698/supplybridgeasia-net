@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SBA-QT-20261119-235 — Projet UGP / SWEDD+ — Modernisation Salle de Réunion (Tchad) | SUPPLY BRIDGE ASIA</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 24px 16px;
+      line-height: 1.5;
+    }
+    .toolbar {
+      max-width: 920px;
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: #0f172a;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+    }
+    .toolbar-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-print { background: #38bdf8; color: #0f172a; }
+    .btn-wa { background: #22c55e; color: #fff; }
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 36px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+      border-top: 6px solid #0284c7;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    .brand h1 { font-size: 22px; letter-spacing: 0.5px; color: #0f172a; font-weight: 800; }
+    .brand p { font-size: 12px; color: #475569; margin-top: 3px; }
+    .doc-badge {
+      text-align: right;
+    }
+    .doc-badge .tag {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-weight: 700;
+      font-size: 11.5px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.4px;
+    }
+    .doc-badge .qno {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-top: 6px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .meta-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 12.5px;
+    }
+    .meta-box h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #0284c7;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .meta-row { margin-bottom: 4px; display: flex; gap: 6px; }
+    .meta-row strong { color: #334155; min-width: 125px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+    }
+    th {
+      background: #0f172a;
+      color: #fff;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      padding: 10px 10px;
+      text-align: left;
+    }
+    td {
+      padding: 10px 10px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+    .total-bar {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 6px;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 13.5px;
+    }
+    .total-bar strong { color: #0369a1; font-size: 15px; }
+    .info-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .info-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px 15px;
+      font-size: 12px;
+      color: #334155;
+    }
+    .info-card h4 {
+      font-size: 11.5px;
+      color: #0f172a;
+      margin-bottom: 6px;
+      font-weight: 700;
+      border-left: 3px solid #0284c7;
+      padding-left: 8px;
+    }
+    .footer-sign {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 14px;
+      font-size: 12px;
+      color: #475569;
+    }
+    .stamp-box {
+      text-align: right;
+    }
+    .stamp {
+      display: inline-block;
+      border: 2px solid #0284c7;
+      color: #0284c7;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11.5px;
+      letter-spacing: 0.5px;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .toolbar { display: none !important; }
+      .page { box-shadow: none; padding: 16px 20px; max-width: 100%; border-radius: 0; }
+    }
+    @media (max-width: 700px) {
+      .meta-grid, .info-section { grid-template-columns: 1fr; }
+      .page { padding: 20px 16px; }
+      table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <div style="font-size:13px;font-weight:600;">SUPPLY BRIDGE ASIA — SBA-QT-20261119-235 (Projet UGP / SWEDD+ — Modernisation Salle de Réunion (Tchad))</div>
+    <div class="toolbar-actions">
+      <button class="btn btn-print" onclick="window.print()">🖨️ Imprimer / Enregistrer en PDF</button>
+      <a class="btn btn-wa" href="mailto:zane@supplybridgeasia.net?subject=Re:%20SBA-QT-20261119-235%20-%20Projet%20UGP%20%2F%20SWEDD%2B%20%E2%80%94%20Modernisation%20Salle%20de%20R%C3%A9union%20(Tchad)">✉️ zane@supplybridgeasia.net</a>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <div class="brand">
+        <h1>SUPPLY BRIDGE ASIA</h1>
+        <p>Hangzhou Supply Bridge Asia Co., Ltd. | Multi-Category Project Supply & Container Consolidation</p>
+        <p>Email: zane@supplybridgeasia.net / zane@supplybridgeasia.com | Web: https://supplybridgeasia.net</p>
+      </div>
+      <div class="doc-badge">
+        <span class="tag">DEVIS INDICATIF / OFFRE DE PRIX INDICATIVE</span>
+        <div class="qno">SBA-QT-20261119-235</div>
+        <div style="font-size:12px;color:#475569;margin-top:2px;">19 Novembre 2026</div>
+      </div>
+    </div>
+
+    <div class="meta-grid">
+      <div class="meta-box">
+        <h3>DESTINATAIRE / CLIENT</h3>
+        <div class="meta-row"><strong>Client / Entreprise:</strong> <span>Projet UGP / SWEDD+ — Modernisation Salle de Réunion (Tchad)</span></div>
+        <div class="meta-row"><strong>WhatsApp / Tel:</strong> <span>+235 66 41 08 09</span></div>
+        <div class="meta-row"><strong>Pays / Country:</strong> <span>Tchad (N'Djamena)</span></div>
+        <div class="meta-row"><strong>Projet / Référence:</strong> <span>OP00481453 — Renouvellement des équipements des salles de réunion de l'UGP / SWEDD+ (Postes 1 à 8 du Catalogue)</span></div>
+      </div>
+      <div class="meta-box">
+        <h3>RÉFÉRENCES DE L'OFFRE</h3>
+        <div class="meta-row"><strong>Validité de l'offre:</strong> <span>04 Décembre 2026 (15 jours calendaires)</span></div>
+        <div class="meta-row"><strong>Incoterm:</strong> <span>Indicative FOB Shenzhen / Ningbo, Chine (Incoterms® 2020 — Option Fret Aérien / Maritime + Transit Terrestre vers N'Djamena sur demande)</span></div>
+        <div class="meta-row"><strong>Port / Destination:</strong> <span>N'Djamena, Tchad (via Fret Aérien N'Djamena ou Transit Douala + Voie Terrestre)</span></div>
+        <div class="meta-row"><strong>Délai de mise à FOB:</strong> <span>7–12 jours ouvrés après réception de l'acompte</span></div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:42px;text-align:center;">N°</th>
+          <th>Désignation & Spécifications Techniques</th>
+          <th style="width:140px;">Normes & Essais</th>
+          <th style="width:85px;text-align:center;">Unité</th>
+          <th style="width:135px;text-align:right;">Prix Unitaire (FOB Chine)</th>
+          <th style="width:95px;text-align:center;">Qté Type (Lot)</th>
+          <th style="width:145px;text-align:right;">Sous-total Indicatif (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">01</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Plateforme Centralisée de Gestion de Salle (Équivalent Sony TEOS Meeting Room)</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Boîtier serveur & plateforme logicielle centralisée (licence perpétuelle sans frais annuels) pilotant réservation de salle, affichage, scénarios d'éclairage et température depuis une interface unique, 100% compatible avec les tablettes PoE (Poste 2)</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">CE / RoHS — Usine ISO 9001</td>
+        <td style="text-align:center;font-size:12.5px;">Ensemble<br><span style="font-size:11px;color:#64748b;">(MOQ: 1 Ensemble)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$680.00 USD</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">1 Ensemble</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$680.00</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">02</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Interface de Contrôle Tactile Murale 10.1" PoE (Équivalent Tablette TEOS)</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Tablette tactile professionnelle 10.1" IPS haute résolution dédiée, alimentation et réseau PoE (IEEE 802.3af) via RJ45, bandeau LED d'état, connectée à la plateforme de gestion pour contrôle audio/vidéo/climat</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">CE / FCC / RoHS — Usine ISO 9001</td>
+        <td style="text-align:center;font-size:12.5px;">Unité<br><span style="font-size:11px;color:#64748b;">(MOQ: 2 Unités)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$245.00 USD</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">2 Unité</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$490.00</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">03</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Affichage Visuel : Moniteur Professionnel 75" 4K UHD (Équivalent Sony BRAVIA FW-75EZ20L)</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Écran professionnel grand format 75 pouces 4K UHD (3840×2160), dalle IPS commerciale 400 cd/m² anti-reflet, fonctionnement continu 18/7–24/7, traitement couleur haute fidélité, livré avec support mural VESA 600×400 renforcé</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">CE / CB / RoHS — Usine ISO 9001</td>
+        <td style="text-align:center;font-size:12.5px;">Unité<br><span style="font-size:11px;color:#64748b;">(MOQ: 2 Unités)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$1,180.00 USD</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">2 Unité</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$2,360.00</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">04</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Capture Audio : Microphone Plafond IP à Faisceaux Beamforming Dante/PoE (Équivalent Sony MAS-A100)</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Microphone matriciel plafond IP à formation de faisceaux (beamforming), réponse en fréquence 80 Hz – 14 kHz, bruit de fond < 19 dB SPL, connectivité Dante native et alimentation PoE (IEEE 802.3af), DSP intégré avec réduction de bruit (ANC), annulation d'écho (AEC) et anti-Larsen automatique</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">CE / RoHS / Dante — Usine ISO 9001</td>
+        <td style="text-align:center;font-size:12.5px;">Unité<br><span style="font-size:11px;color:#64748b;">(MOQ: 2 Unités)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$490.00 USD</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">2 Unité</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$980.00</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">05</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Capture Vidéo Vue d'Ensemble : Caméra Grand Angle 4K IP PoE (Équivalent Sony SRG-XP1)</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Caméra 4K UHD (3840×2160 @ 60fps) à objectif ultra-grand angle 105° sans distorsion, sorties IP (RTSP/RTMP/ONVIF), HDMI et USB 3.0, alimentation PoE, conçue pour couvrir l'ensemble des participants en un seul plan</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">CE / FCC / RoHS — Usine ISO 9001</td>
+        <td style="text-align:center;font-size:12.5px;">Unité<br><span style="font-size:11px;color:#64748b;">(MOQ: 1 Unité)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$480.00 USD</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">1 Unité</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$480.00</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">06</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Capture Vidéo Gros Plan : Caméra PTZ 4K Zoom 20x Cadrage IA (Équivalent Sony SRG-A40)</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Caméra PTZ motorisée 4K UHD, zoom optique 20x + cadrage et suivi automatique de l'intervenant par Intelligence Artificielle (AI Auto-Framing), sorties IP (PoE), HDMI et 3G-SDI</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">CE / FCC / RoHS — Usine ISO 9001</td>
+        <td style="text-align:center;font-size:12.5px;">Unité<br><span style="font-size:11px;color:#64748b;">(MOQ: 1 Unité)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$790.00 USD</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">1 Unité</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$790.00</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">07</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Sonorisation : Haut-Parleurs Plafond Coaxiaux Dante Natif / PoE+</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Haut-parleur plafond actif 6.5" coaxial avec module Dante natif intégré et amplificateur PoE+ (IEEE 802.3at), synchronisé avec les microphones plafond (Poste 4) pour diffusion homogène sans amplificateur externe</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">CE / RoHS / Dante — Usine ISO 9001</td>
+        <td style="text-align:center;font-size:12.5px;">Unité<br><span style="font-size:11px;color:#64748b;">(MOQ: 4 Unités)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$135.00 USD</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">4 Unité</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$540.00</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:600;color:#475569;">08</td>
+        <td>
+          <div style="font-weight:700;color:#0f172a;font-size:13.5px;">Confort Thermique : Capteur Intelligent de Température de Salle Connecté IP</div>
+          <div style="font-size:12px;color:#475569;margin-top:2px;line-height:1.4;">Capteur mural numérique de température et d'humidité connecté IP / PoE / RS485, interfacé avec la plateforme de gestion de salle (Poste 1) pour régulation automatique du climat</div>
+        </td>
+        <td style="font-size:12px;color:#1e293b;font-weight:500;">CE / RoHS — Usine ISO 9001</td>
+        <td style="text-align:center;font-size:12.5px;">Unité<br><span style="font-size:11px;color:#64748b;">(MOQ: 1 Unité)</span></td>
+        <td style="text-align:right;font-weight:700;color:#0f172a;font-size:13.5px;white-space:nowrap;">$75.00 USD</td>
+        <td style="text-align:center;font-size:12.5px;color:#334155;">1 Unité</td>
+        <td style="text-align:right;font-weight:600;color:#0369a1;font-size:13px;white-space:nowrap;">$75.00</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="total-bar">
+      <span><strong>Total Estimatif Lot Type (FOB Chine):</strong></span>
+      <strong>$6,395.00 USD (FOB Chine — Lot Complet Postes 1 à 8 Équivalent Certifié CE | Option Configuration de Référence Sony Postes 1–8 disponible sur demande à env. $16,690.00 USD FOB)</strong>
+    </div>
+
+    <div class="info-section">
+      <div class="info-card">
+        <h4>AVANTAGE GROUPAGE CONTENEUR & CONTRÔLE QUALITÉ (SBA)</h4>
+        <p>Périmètre couvert : Postes 1 à 8 complets selon votre tableau technique (Alimentation 220–240V / 50Hz, prises standard C/E/F Tchad). Note : Les équipements complémentaires (Postes 9 à 17 : switch PoE+, onduleur 10kVA, mini-PC/OPS, DSP USB, supports plafonds, baie 12U, parafoudre et cordons) peuvent être ajoutés en option groupée.</p>
+        <p style="margin-top:6px;color:#0369a1;font-weight:600;">Pour l'expédition urgente vers N'Djamena, souhaitez-vous valider cette Option Équivalente Certifiée CE ($6,395.00 FOB, disponible sous 7–10 jours) et ajouter le chiffrage des Postes complémentaires 9 à 17 ?</p>
+      </div>
+      <div class="info-card">
+        <h4>CONDITIONS DE PAIEMENT, INSPECTION & GARANTIES D'EXÉCUTION</h4>
+        <p><strong>Payment:</strong> 30% T/T d'acompte à la commande + 70% T/T avant expédition (après rapports de tests usine, inspection SGS/BV et vidéo WhatsApp en direct des équipements sous tension), ou 100% L/C irrévocable à vue soumise aux RUU 600 (UCP 600).</p>
+        <p style="margin-top:6px;">Exécution via nos usines partenaires certifiées ISO/IEC en Chine avec consolidation multi-lots, rapports d'essais usine complets, inspection SGS ou Bureau Veritas (BV) avant expédition et vidéo WhatsApp en direct de l'empotage avant règlement du solde.</p>
+      </div>
+    </div>
+
+    <div class="footer-sign">
+      <div>
+        <strong>Prepared by:</strong> Zane Zhou — Export Project Director, SUPPLY BRIDGE ASIA<br>
+        <span>Direct Email: zane@supplybridgeasia.net | Official Portal: https://supplybridgeasia.net</span>
+      </div>
+      <div class="stamp-box">
+        <div class="stamp">AUTHORIZED QUOTATION<br>SUPPLY BRIDGE ASIA</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
